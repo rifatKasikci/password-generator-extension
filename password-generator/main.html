@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Password Generator</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    div {
+        margin: 50px auto;
+        width: 400px;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    button.generate-password, button.copy-password{
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        border: none;
+    }
+
+    button.copy-password {
+        background-color: #2196F3;
+    }    
+
+    .generate-password:hover {
+        background-color: #3e8e41;
+    }
+
+    .copy-password:hover {
+        background-color: #117fe6;
+    }
+
+    .password-output {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.copy-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+</style>
+
+<body>
+    <div>
+        <h1>Password Generator</h1>
+        <p>Click for generate password.</p>
+        <input type="text" disabled class="password-output" id="passwordOutput">
+        <button class="generate-password" onclick="generatePassword()">Generate Password</button>
+        <button class="copy-password" onclick="copyPassword()">Copy Password</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
